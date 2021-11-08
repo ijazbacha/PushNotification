@@ -16,10 +16,14 @@ const App = () => {
   }
 
   const handleNotification = () => {
+    PushNotification.cancelAllLocalNotifications()
     PushNotification.localNotification({
       channelId:"test-channel",
       title: "Title of the message !!:D",
-      message: "try to show notification"
+      message: "try to show notification",
+      bigText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      color:"green",
+      // id:
     })
   }
 
